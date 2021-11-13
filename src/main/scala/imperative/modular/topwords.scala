@@ -51,25 +51,8 @@ trait countWordFrequency extends Task[String] {
         val (x, y) = build2(a._1, b)
         (x, y)
     }.drop(1).scanLeft(emptyMap)(buildMap).drop(1)
-
-    /*val queues = words.scanLeft(empty)((q: immutable.Queue[String], word: String) =>
-      println(word)
-      val q1 = q.enqueue(word) //since it's immutable, creates new q1 (new queue) and q is original queue
-      if q1.size > capacity then q1.dequeue._2 else q1
-    )*/
     queues
-    
-    
-    
-    
     }
-/*
-    val result = run(input, args)
-    //result.foreach(r => println(r))
-    //result.foreach{case (k->v) => println(k + ": " + v + " ")}
-    result.foreach {
-      case (key, value) => println(s"$key: $value")
-    }*/
   }
 
 
